@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BannerComponent } from './banner/banner.component';
+import {RouterLink} from "@angular/router";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -10,10 +12,17 @@ import { BannerComponent } from './banner/banner.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
+    BannerComponent,
+    PageNotFoundComponent
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
     BannerComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterLink
   ]
 })
 export class CoreModule { }
